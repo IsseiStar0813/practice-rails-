@@ -49,6 +49,7 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  config.hosts << "0c682e8373ec49ab9cb60bb762c7cfcd.vfs.cloud9.us-east-2.amazonaws.com"
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true

@@ -1,0 +1,10 @@
+<% if @user.errors.any? %>
+<%= @user.errors.count %> 個エラーがあります。
+<ul>
+<% for message in @user.errors.full_messages do %>
+<li>
+  <%= message %>
+</li>
+<% end %>
+</ul>
+<% end %>

@@ -11,4 +11,14 @@ module SessionsHelper
       User.find_by(id:session[:user_id])
     end
   end
+  
+  # ユーザーがログイン中かどうか確認
+  def logged_in?
+    !current_user.nil?
+  end
+  
+  # ログアウトする
+  def log_out 
+    session.delete(:user_id)
+  end
 end

@@ -11,6 +11,9 @@
 
   <body>
     <%= render "layouts/header" %>
+    <% flash.each do |messagetype,message| %>
+    <%= message %>
+    <% end %>
     <%= yield %>
     <%= render "layouts/footer" %>
   </body>
